@@ -1,0 +1,287 @@
+.homepage{
+    background-image: url('../../Images/cloudSharing.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: black;
+    display: flex;
+    justify-content: flex-end;
+  
+    button {
+      margin: 10px;
+      width: 200px;
+      height: 40px;
+      font-size: 16px;
+      font-weight: 600;
+      color: white;
+      border-radius: 10px;
+      border: 3px solid lightgreen;
+      background-color: black;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #4caf50;
+      color: white;
+    }
+    
+}
+.SuccessPopup{
+  position: fixed;
+  top: 30%;
+  left: 40%;
+  background-color: whitesmoke;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  img{
+    width: 100px;
+  }
+  h1{
+    // width: 70%;
+    font-size: 24px;
+    font-weight: 900;
+    font-family: Open Sans;
+  }
+  button {
+    margin: 10px;
+    width: 200px;
+    height: 40px;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    border-radius: 10px;
+    border: 3px solid lightgreen;
+    background-color: black;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: #4caf50;
+    color: white;
+  }
+}
+.cloudMessages{
+  position: fixed;
+    left: 0;
+    top: 0;
+    margin-top: 10%;
+    margin-left: 100px;
+    color: white;
+    h1{
+      width: 70%;
+      font-size: 30px;
+      font-weight: 900;
+      font-family: Open Sans;
+    }
+    p{
+      font-size: 16px;
+      font-weight: 300;
+      font-family: Open Sans;
+    }
+}
+.shareSection{
+    position: fixed;
+    left: 0;
+    top: 0;
+    margin-top: 200px;
+    width: 300px;
+    background-color: rgb(204, 235, 159);
+    border:1px solid black;
+    ul{
+        color: black;
+        li{
+            border: 0.5px solid black;
+            margin: 5px;
+            display: flex;
+            justify-content: space-between;
+            // button{
+            //     margin-left: 20px;
+            // }
+        }
+    }
+}
+.downloadSection{
+  position: absolute;
+  // left: 40%;
+  right: 0;
+  top: 0;
+  margin-right: 100px;
+  margin-top: 200px;
+  margin-bottom: 100px;
+  // width: 300px;
+  background-color: transparent;
+  // border: 3px solid lightgreen;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+  transition: background-color 0.3s ease;
+  // border: 1px solid black;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  ul{
+     color: white;
+     list-style-type:disc;
+     overflow-y: auto; /* Enable vertical scrolling if content exceeds the height */
+      max-height: 500px;
+      scrollbar-width: none; /* Hide the scrollbar in Firefox */
+      -ms-overflow-style: none;
+     li::marker {
+      color: white;
+    }
+      li{
+          border: 0.5px solid  lightgreen;
+          padding: 10px;
+          margin: 5px;
+          display: flex;
+          justify-content: space-between;
+          border-radius: 6px;
+          button{
+              margin-left: 20px;
+          }
+      }
+      li button {
+          background-color: lightgreen;
+          color: black;
+          border: none;
+          padding: 5px 10px;
+          border-radius: 4px;
+          cursor: pointer;
+        }
+        li button:hover {
+            background-color: #4caf50;
+            color: white;
+          }
+  }
+}
+// .downloadSection ul {
+//   /* Your existing styles for .downloadSection ul */
+//   list-style-type: disc;
+//   padding: 0;
+//   color: white;
+//   overflow-y: auto;
+//   max-height: 200px;
+//   overflow-x: hidden; /* Hide the horizontal scrollbar */
+//   overflow-y: hidden; /* Hide the vertical scrollbar */
+// }
+
+/* Hide the scrollbar in Webkit (Chrome, Safari) */
+.downloadSection ul::-webkit-scrollbar {
+  width: 0;
+  display: none; /* Hide scrollbar in Webkit-based browsers */
+}
+
+.downloadSection ul li {
+  opacity: 0;
+}
+
+/* Add a class for the animation */
+.animate {
+  animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Add animation delay classes */
+.delay-0 {
+  animation-delay: 0s;
+}
+
+.delay-1 {
+  animation-delay: 1s;
+}
+
+.delay-2 {
+  animation-delay: 2s;
+}
+.downloadSection:hover {
+  background-color: #afabab; /* Change background color on hover */
+}
+
+// .downloadSection {
+//   position: fixed;
+//   right: 0;
+//   top: 0;
+//   margin-right: 80px;
+//   margin-top: 100px;
+//   // width: 300px;
+//   background-color: black;
+//   border: 3px solid lightgreen;
+//   border-radius: 6px;
+//   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+// }
+
+// .downloadSection ul {
+//   list-style-type: none;
+//   padding: 0;
+//   display: flex; /* Display list items horizontally */
+//   flex-direction: column; /* Stack list items vertically */
+// }
+
+// .downloadSection li {
+//   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+//   padding: 10px;
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between; /* Space out list items */
+//   width: 100%; /* Ensure list items take full width */
+// }
+
+// .downloadSection li:last-child {
+//   border-bottom: none; /* Remove border from the last li */
+// }
+
+// .downloadSection li button {
+//   background-color: lightgreen;
+//   color: black;
+//   border: none;
+//   padding: 5px 10px;
+//   border-radius: 4px;
+//   cursor: pointer;
+// }
+
+// .downloadSection li button:hover {
+//   background-color: #4caf50;
+//   color: white;
+// }
+
+
+.profilesection {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    background-color: black;
+   margin: 30px;
+    .profile-image {
+      width: 100%; // This will make sure the image fills the container
+      height: 100%; // Adjust height if needed
+      border-radius: 50px; // Make sure it matches the parent's border-radius
+    }
+  }
+  .Buttons button:nth-child(1) {
+    background-color: rgba(223, 141, 18, 0.356);
+    margin: 10px;
+  }
+  .Buttons button:nth-child(2) {
+    background-color: rgb(28, 224, 143);
+  }
