@@ -121,7 +121,7 @@ const HomePage = () => {
 
   const downloadFiledata = async (id, name, type) => {
     try {
-      const response = await fetch(`http://localhost:8000/file/${id}`);
+      const response = await fetch(`https://filesharingadi-e1a9a8b291a1.herokuapp.com/file/${id}`);
       const blob = await response.blob();
   
       // Create a temporary anchor element
