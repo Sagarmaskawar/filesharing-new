@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const APIURl='http://localhost:8000'
+const APIURl='https://filesharingadi-e1a9a8b291a1.herokuapp.com'
 export const uploadFile=async(data)=>{
  try{
     let respone = await axios.post(`${APIURl}/upload`,data)
